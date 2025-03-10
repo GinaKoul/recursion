@@ -13,7 +13,7 @@ function fibsRec(value) {
   if (value === 0) return [];
   if (value <= 1) return [0];
   if (value === 2) return [0, 1];
-  let array = fibs(value - 1);
+  let array = fibsRec(value - 1);
   let i = array.length;
   array.push(array[i - 1] + array[i - 2]);
   return array;
